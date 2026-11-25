@@ -4,7 +4,9 @@
   if (typeof window.matchMedia !== "function") return;
 
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-  const fineHoverPointer = window.matchMedia("(hover: hover) and (pointer: fine)");
+  const fineHoverPointer = window.matchMedia(
+    "(hover: hover) and (pointer: fine)",
+  );
 
   if (reducedMotion.matches || !fineHoverPointer.matches) return;
 
